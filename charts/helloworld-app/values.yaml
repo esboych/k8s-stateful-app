@@ -1,0 +1,47 @@
+replicaCount: 3
+
+image:
+  repository: local-repo/helloworld-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+postgresql:
+  host: postgres-postgresql.default.svc.cluster.local
+  db: hello_world_db
+  port: 5432
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: 5000
+  initialDelaySeconds: 3
+  periodSeconds: 10
+
+readinessProbe:
+  httpGet:
+    path: /readiness
+    port: 5000
+  initialDelaySeconds: 3
+  periodSeconds: 10
+
+nodeSelector: {}
+
+tolerations: {}
+
+affinity: {}
+
+quotas:
+  cpu: "2"
+  memory: "4Gi"

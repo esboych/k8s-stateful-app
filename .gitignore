@@ -1,0 +1,91 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+
+# Flask specific
+instance/
+.webassets-cache
+
+# SQLite databases
+*.db
+*.sqlite3
+
+# Pytest
+.cache/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+pytestdebug.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+ENV/
+env/
+venv/
+env.bak/
+venv.bak/
+ENV.bak/
+.venv.bak/
+
+# Docker
+*.log
+docker-compose.yml
+docker-compose.override.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Helm
+charts/helloworld-app/charts/
+charts/helloworld-app/tmpcharts/
+charts/helloworld-app/Chart.lock
+
+# Local Environment Configurations
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore sensitive information
+secrets/
+.env
+
+# Output files
+output/

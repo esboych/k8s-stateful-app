@@ -1,0 +1,9 @@
+global:
+  postgresql:
+    postgresqlDatabase: hello_world_db
+    postgresqlUsername: user
+    postgresqlPassword: password
+primary:
+  persistence:
+    enabled: true
+    size: 1Gi

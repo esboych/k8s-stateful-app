@@ -1,0 +1,16 @@
+postgresql:
+  host: postgres-postgresql.default.svc.cluster.local
+  db: hello_world_db
+  port: 5432
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+quotas:
+  cpu: "1"
+  memory: "1Gi"
